@@ -21,5 +21,5 @@ func GetSubCategoriesName() []string {
 }
 
 func GetViewType() []string {
-	return []string{"H_LIST", "V_LIST", "GRID", "CARD", "H_PAGER", "V_PAGER", "GALLERY", "WEB"}
+	return []string{"H_LIST", "V_LIST", "GRID", "CARD", "H_PAGER", "V_PAGER", "GALLERY", "WEB", "SubCategory"}
 }
