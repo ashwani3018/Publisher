@@ -7,8 +7,11 @@ type Category struct {
 	ShowInTopbar bool `json:"showInTopbar"`
 	IsFree bool `json:"isFree"`
 	CategoryLink string `json:"catLink"`
-	SubCategory []string `json:"subCategory"`
+	SubCategory []Category `json:"subCategory"`
 	ViewConfiguration []ViewConfig `json:"viewConfig"`
+	ThumbUrl string `json:thumbUrl`
+	BannerUrl string `json:bannerUrl`
+	ShortMsg string `json:shortMsg`
 }
 
 type ViewConfig struct {
