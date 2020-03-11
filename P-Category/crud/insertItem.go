@@ -32,12 +32,14 @@ func InsertItem() {
 		viewConfiguration := model.ViewConfig{ActionTitle: "Action Title", ViewIndex: 1, ViewTitle: "View Title", ViewType: "H_LIST"}
 		categoryViewConfigs = append(categoryViewConfigs, viewConfiguration)
 
-		subCategoryList :=[] model.Category{}
+
+		subCategoryList := model.SubCategory{}
+
 		category := model.Category {
-			Name:categoryName,
-			Id:categoryIds[i],
-			ViewConfiguration: categoryViewConfigs,
-			SubCategory:subCategoryList,
+			Name:                     categoryName,
+			Id:                       categoryIds[i],
+			NonGroupedItemViewConfig: categoryViewConfigs,
+			SubCategory:              subCategoryList,
 		}
 
 		av, err := dynamodbattribute.MarshalMap(category)
