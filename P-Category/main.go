@@ -1,6 +1,6 @@
 package main
 
-import "./crud"
+import "Publisher/P-Category/crud"
 
 func main() {
 	crud.CreateTable()
