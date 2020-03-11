@@ -21,7 +21,7 @@ func CreateTable() {
 		AttributeDefinitions: []*dynamodb.AttributeDefinition{
 			{
 				AttributeName: aws.String("ID"),
-				AttributeType: aws.String("N"),
+				AttributeType: aws.String("S"),
 			},
 			{
 				AttributeName: aws.String("Name"),

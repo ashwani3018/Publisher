@@ -17,5 +17,9 @@ func GetCategoriesIds() []string {
 }
 
 func GetSubCategoriesName() []string {
-	return []string{"Economy", "Markets", "Industry", "Bengaluru", ""}
+	return []string{"Economy", "Markets", "Industry", "Bengaluru"}
+}
+
+func GetViewType() []string {
+	return []string{"H_LIST", "V_LIST", "GRID", "CARD", "H_PAGER", "V_PAGER", "GALLERY", "WEB"}
 }
