@@ -1,0 +1,153 @@
+{
+  "ID": 400,
+  "category": [{
+    "id": "categoryId 0",
+    "categoryAds": [{
+      "position": 0,
+      "adsId": "AdsID 00",
+      "type": "300x250"
+    }, {
+      "position": 1,
+      "adsId": "AdsID 01",
+      "type": "300x250"
+    }, {
+      "position": 2,
+      "adsId": "AdsID 02",
+      "type": "300x250"
+    }, {
+      "position": 3,
+      "adsId": "AdsID 03",
+      "type": "300x250"
+    }, {
+      "position": 4,
+      "adsId": "AdsID 04",
+      "type": "300x250"
+    }]
+  }, {
+    "id": "categoryId 1",
+    "categoryAds": [{
+      "position": 0,
+      "adsId": "AdsID 10",
+      "type": "300x250"
+    }, {
+      "position": 1,
+      "adsId": "AdsID 11",
+      "type": "300x250"
+    }, {
+      "position": 2,
+      "adsId": "AdsID 12",
+      "type": "300x250"
+    }, {
+      "position": 3,
+      "adsId": "AdsID 13",
+      "type": "300x250"
+    }, {
+      "position": 4,
+      "adsId": "AdsID 14",
+      "type": "300x250"
+    }]
+  }, {
+    "id": "categoryId 2",
+    "categoryAds": [{
+      "position": 0,
+      "adsId": "AdsID 20",
+      "type": "300x250"
+    }, {
+      "position": 1,
+      "adsId": "AdsID 21",
+      "type": "300x250"
+    }, {
+      "position": 2,
+      "adsId": "AdsID 22",
+      "type": "300x250"
+    }, {
+      "position": 3,
+      "adsId": "AdsID 23",
+      "type": "300x250"
+    }, {
+      "position": 4,
+      "adsId": "AdsID 24",
+      "type": "300x250"
+    }]
+  }],
+  "subCategory": [{
+    "id": "subCategoryId 0",
+    "categoryAds": [{
+      "position": 0,
+      "adsId": "AdsID 00",
+      "type": "300x250"
+    }, {
+      "position": 1,
+      "adsId": "AdsID 01",
+      "type": "300x250"
+    }, {
+      "position": 2,
+      "adsId": "AdsID 02",
+      "type": "300x250"
+    }, {
+      "position": 3,
+      "adsId": "AdsID 03",
+      "type": "300x250"
+    }, {
+      "position": 4,
+      "adsId": "AdsID 04",
+      "type": "300x250"
+    }]
+  }, {
+    "id": "subCategoryId 1",
+    "categoryAds": [{
+      "position": 0,
+      "adsId": "AdsID 10",
+      "type": "300x250"
+    }, {
+      "position": 1,
+      "adsId": "AdsID 11",
+      "type": "300x250"
+    }, {
+      "position": 2,
+      "adsId": "AdsID 12",
+      "type": "300x250"
+    }, {
+      "position": 3,
+      "adsId": "AdsID 13",
+      "type": "300x250"
+    }, {
+      "position": 4,
+      "adsId": "AdsID 14",
+      "type": "300x250"
+    }]
+  }, {
+    "id": "subCategoryId 2",
+    "categoryAds": [{
+      "position": 0,
+      "adsId": "AdsID 20",
+      "type": "300x250"
+    }, {
+      "position": 1,
+      "adsId": "AdsID 21",
+      "type": "300x250"
+    }, {
+      "position": 2,
+      "adsId": "AdsID 22",
+      "type": "300x250"
+    }, {
+      "position": 3,
+      "adsId": "AdsID 23",
+      "type": "300x250"
+    }, {
+      "position": 4,
+      "adsId": "AdsID 24",
+      "type": "300x250"
+    }]
+  }],
+  "bottomBanner": {
+    "adsId": "Bottom Banner Ads Id",
+    "totalRequest": 20
+  },
+  "fullScreen": {
+    "adsId": "FullScreen Ads Id",
+    "totalRequest": 20,
+    "showInDetail": true,
+    "showInListing": true
+  }
+}
