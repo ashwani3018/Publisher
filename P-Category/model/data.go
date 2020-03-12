@@ -1,12 +1,7 @@
 package model
 
-/*func GetCategoriesName() []string {
-	return []string{"Home", "National", "International",  "State", "Sports", "Business", "Cities"}
-}
+import "Publisher/P-Category/constant"
 
-func GetCategoriesIds() []string {
-	return []string{"Home_id", "National_id", "International_id",  "State_id", "Sports_id", "Business_id", "Cities_id"}
-}*/
 
 func GetCategoriesName() []string {
 	return []string{"Home", "National", "International",  "State"}
@@ -21,5 +16,6 @@ func GetSubCategoriesName() []string {
 }
 
 func GetViewType() []string {
-	return []string{"H_LIST", "V_LIST", "GRID", "CARD", "H_PAGER", "V_PAGER", "GALLERY", "WEB", "SubCategory"}
+	return []string{constant.VT_ITEM, constant.VT_H_LIST, constant.VT_V_LIST, constant.VT_GRID, constant.VT_CARD, constant.VT_H_PAGER,
+		constant.VT_V_PAGER, constant.VT_GALLERY, constant.VT_WEB, constant.VT_SubCategory}
 }
