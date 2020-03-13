@@ -56,6 +56,7 @@ func InsertItem() {
 		categoryItem.Id = categoryItemIds[i]
 		categoryItem.SubCategory = subCategoryList
 
+		// Creating View Configuration for Non-Grouped Items of Category
 		nonGroupedItemViewConfigSlice := []model.ViewConfig{}
 		nonGroupedItemViewConfig := model.DefaultViewConfig()
 		nonGroupedItemViewConfig.ViewTitle = "Item View Title"
