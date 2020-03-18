@@ -12,10 +12,10 @@ import (
 )
 
 type Article struct {
-	ArticleID string `json:ArticleID`
-	PublishTime int64 `json:PublishTime`
-	OriginTime int64 `json:OriginTime`
-	Title string `json:Title`
+	ArticleID        string   `json:ArticleID`
+	PublishTime      int64    `json:PublishTime`
+	OriginTime       int64    `json:OriginTime`
+	Title            string   `json:Title`
 	Author           []string `json:Author`
 	ArticleLink      string   `json:ArticleLink`
 	ShortDescription string   `json:ShortDescription`
@@ -29,6 +29,7 @@ type Article struct {
 	categoryId       string   `json:CategoryID`
 	MediaID          string   `json:MediaID`
 	IsFree           bool     `json:IsFree`
+	SearchText       []string `json:searchText`
 }
 
 func InsertItem() {

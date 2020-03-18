@@ -25,30 +25,30 @@ func DefaultCategoryItem() CategoryItem {
 	categoryItem.ArticleGroup8 = append(categoryItem.ArticleGroup8, DefaultArticleGroup())
 	categoryItem.ArticleGroup9 = append(categoryItem.ArticleGroup9, DefaultArticleGroup())
 
-	return categoryItem;
+	return categoryItem
 }
 
 type CategoryItem struct {
-	Id                       string         `json:"ID" "required"`
-	Name                     string         `json:"Name" "required"`
-	ShowInSlider             bool           `json:"showInSlider"`
-	ShowInTopbar             bool           `json:"showInTopbar"`
-	IsFree                   bool           `json:"isFree"`
-	CategoryLink             string         `json:"catLink"`
-	SubCategory              []SubCategoryItem    `json:"subCategory"`
-	NonGroupedItemViewConfig []ViewConfig   `json:"nonGroupedItemViewConfig"`
-	ThumbUrl                 string         `json:thumbUrl`
-	BannerUrl                string         `json:bannerUrl`
-	ShortMsg                 string     `json:shortMsg`
-	ArticleGroup1            []ArticleGroup `json:articleGroup1`
-	ArticleGroup2            []ArticleGroup `json:articleGroup2`
-	ArticleGroup3            []ArticleGroup `json:articleGroup3`
-	ArticleGroup4            []ArticleGroup `json:articleGroup4`
-	ArticleGroup5            []ArticleGroup `json:articleGroup5`
-	ArticleGroup6            []ArticleGroup `json:articleGroup6`
-	ArticleGroup7            []ArticleGroup `json:articleGroup7`
-	ArticleGroup8            []ArticleGroup `json:articleGroup8`
-	ArticleGroup9            []ArticleGroup `json:articleGroup9`
+	Id                       string            `json:"ID" "required"`
+	Name                     string            `json:"Name" "required"`
+	ShowInSlider             bool              `json:"showInSlider"`
+	ShowInTopbar             bool              `json:"showInTopbar"`
+	IsFree                   bool              `json:"isFree"`
+	CategoryLink             string            `json:"catLink"`
+	SubCategory              []SubCategoryItem `json:"subCategory"`
+	NonGroupedItemViewConfig []ViewConfig      `json:"nonGroupedItemViewConfig"`
+	ThumbUrl                 string            `json:thumbUrl`
+	BannerUrl                string            `json:bannerUrl`
+	ShortMsg                 string            `json:shortMsg`
+	ArticleGroup1            []ArticleGroup    `json:articleGroup1`
+	ArticleGroup2            []ArticleGroup    `json:articleGroup2`
+	ArticleGroup3            []ArticleGroup    `json:articleGroup3`
+	ArticleGroup4            []ArticleGroup    `json:articleGroup4`
+	ArticleGroup5            []ArticleGroup    `json:articleGroup5`
+	ArticleGroup6            []ArticleGroup    `json:articleGroup6`
+	ArticleGroup7            []ArticleGroup    `json:articleGroup7`
+	ArticleGroup8            []ArticleGroup    `json:articleGroup8`
+	ArticleGroup9            []ArticleGroup    `json:articleGroup9`
 }
 
 func DefaultSubCategoryItem() SubCategoryItem {
@@ -75,7 +75,7 @@ func DefaultSubCategoryItem() SubCategoryItem {
 	subCategoryItem.ArticleGroup8 = append(subCategoryItem.ArticleGroup8, DefaultArticleGroup())
 	subCategoryItem.ArticleGroup9 = append(subCategoryItem.ArticleGroup9, DefaultArticleGroup())
 
-	return subCategoryItem;
+	return subCategoryItem
 }
 
 type SubCategoryItem struct {
@@ -85,7 +85,7 @@ type SubCategoryItem struct {
 	ShowInSlider             bool           `json:"showInSlider"`
 	ShowInTopbar             bool           `json:"showInTopbar"`
 	IsFree                   bool           `json:"isFree"`
-	SubCategoryLink             string         `json:"subCatLink"`
+	SubCategoryLink          string         `json:"subCatLink"`
 	NonGroupedItemViewConfig ViewConfig     `json:"nonGroupedItemViewConfig"`
 	InCategoryItemViewConfig ViewConfig     `json:"InCategoryItemViewConfig"`
 	ThumbUrl                 string         `json:thumbUrl`

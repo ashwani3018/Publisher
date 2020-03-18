@@ -28,12 +28,12 @@ func InsertItem() {
 	//////////////////////////////////////////////////////////////////
 
 	similarNewsStruct := SimilarNewsStruct{}
-	similarNewsStruct.ArticleID = "AID_105"
+	similarNewsStruct.ArticleID = "AID_106"
 	similarNewsStruct.PublishTime = time.Now().Unix() // Current time in Epoch Format
-	similarNewsStruct.SimilarNews = append(similarNewsStruct.SimilarNews, "AID_103")
-	similarNewsStruct.SimilarNews = append(similarNewsStruct.SimilarNews, "AID_102")
-	similarNewsStruct.SimilarNews = append(similarNewsStruct.SimilarNews, "AID_109")
-	similarNewsStruct.SimilarNews = append(similarNewsStruct.SimilarNews, "AID_104")
+	similarNewsStruct.SimilarNews = append(similarNewsStruct.SimilarNews, "AID_163")
+	similarNewsStruct.SimilarNews = append(similarNewsStruct.SimilarNews, "AID_162")
+	similarNewsStruct.SimilarNews = append(similarNewsStruct.SimilarNews, "AID_169")
+	similarNewsStruct.SimilarNews = append(similarNewsStruct.SimilarNews, "AID_164")
 
 	// Marshalling CategoryItem for Dynamo DB
 	dynamoCategoryItem, err := dynamodbattribute.MarshalMap(similarNewsStruct)
