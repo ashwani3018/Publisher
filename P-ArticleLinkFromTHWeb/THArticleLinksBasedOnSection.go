@@ -10,6 +10,7 @@ import (
 
 func main() {
 
+
 	// Instantiate default collector
 	c := colly.NewCollector(
 		// MaxDepth is 1, so only the links on the scraped page
@@ -19,7 +20,8 @@ func main() {
 
 	thUrl := "https://www.thehindu.com/news/international/"
 
-	articleUrl := ".ece"
+	uniqueArticleLinks := make(map[string]string)
+	articleUrlExtension := ".ece"
 
 	c.OnHTML("section[class=feature-news]", func(e *colly.HTMLElement) {
 		link := e.Attr("a")
@@ -32,29 +34,31 @@ func main() {
 			fmt.Println("", elCT)
 			fmt.Println("", elHref)
 
-			if !strings.Contains(elHref, articleUrl) {
-				fmt.Println("Not Article URL, So it is not considered ")
-				return
+			if link, ok := uniqueArticleLinks[elHref]; !ok {
+				uniqueArticleLinks[elHref] = link
+
+				if !strings.Contains(elHref, articleUrlExtension) {
+					fmt.Println("Not Article URL, So it is not considered ")
+					return
+				}
+
+				// Print link
+				fmt.Println(elHref)
+
+				fileName := "International_Articles_Link_On_Section.txt"
+
+				f, err := os.OpenFile(fileName,
+					os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+				if err != nil {
+					log.Println(err)
+				}
+				defer f.Close()
+				if _, err := f.WriteString(elHref + "\n"); err != nil {
+					log.Println(err)
+				}
 			}
-
-			// Print link
-			fmt.Println(elHref)
-
-			fileName := "International_Articles_Link_On_Section.txt"
-
-			f, err := os.OpenFile(fileName,
-				os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
-			if err != nil {
-				log.Println(err)
-			}
-			defer f.Close()
-			if _, err := f.WriteString(elHref + "\n"); err != nil {
-				log.Println(err)
-			}
-
 		})
-
-
+		fmt.Println("", uniqueArticleLinks)
 	})
 
 	c.OnScraped(func(r *colly.Response) {

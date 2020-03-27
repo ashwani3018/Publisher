@@ -2,8 +2,10 @@ package main
 
 import (
 	"Publisher/P-CategoryFromTHWeb/model"
+	"encoding/json"
 	"fmt"
 	"github.com/gocolly/colly"
+	"io/ioutil"
 	"log"
 	"net/url"
 	"os"
@@ -28,7 +30,7 @@ func main() {
 		// Print link
 		// fmt.Println(link)
 
-		fileName := "THLinks5.txt"
+		fileName := "CategoryFromTHWeb.txt"
 
 		f, err := os.OpenFile(fileName,
 			os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
@@ -47,9 +49,15 @@ func main() {
 
 	c.OnScraped(func(r *colly.Response) {
 		fmt.Println("Finished", categories)
+		jsonString, err := json.Marshal(categories)
+		if err != nil {
+			fmt.Println("Error ", err)
+			panic(err)
+		}
+			_ = ioutil.WriteFile("CategoryFromTHWeb.json", jsonString, 0644)
+
 	})
 
-	fmt.Println(categories)
 
 	// Start scraping on https://www.thehindu.com/news
 	c.Visit("https://www.thehindu.com/news")
@@ -86,9 +94,6 @@ func pathSpliter(rawURL string, links map[string]model.Category) {
 
 	for i := 0; i < pathLen; i++ {
 		segment := uriSegments[i]
-
-		//subCategory := model.SubCategory{}
-		//subSubCategory := model.SubSubCategory{}
 
 		if segment != "" {
 
