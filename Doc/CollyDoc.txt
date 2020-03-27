@@ -1,0 +1,2 @@
+Multi Attribute Reading Link
+http://go-colly.org/docs/examples/coursera_courses/

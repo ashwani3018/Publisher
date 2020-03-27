@@ -14,13 +14,13 @@ func main() {
 
 	// Instantiate default collector
 	c := colly.NewCollector(
-		// MaxDepth is 1, so only the links on the scraped page
-		// is visited, and no further links are followed
+		// MaxDepth is 1, so only the categories on the scraped page
+		// is visited, and no further categories are followed
 		colly.MaxDepth(1),
 	)
 
-	//links := &[]model.Category{}
-	links := make(map[string]model.Category)
+	//categories := &[]model.Category{}
+	categories := make(map[string]model.Category)
 
 	c.OnHTML("a[href]", func(e *colly.HTMLElement) {
 		link := e.Attr("href")
@@ -39,23 +39,22 @@ func main() {
 		if _, err := f.WriteString(link + "\n"); err != nil {
 			log.Println(err)
 		}
-		pathSpliter(link, links)
+		pathSpliter(link, categories)
 
 		// Visit link found on page
 		e.Request.Visit(link)
 	})
 
 	c.OnScraped(func(r *colly.Response) {
-		fmt.Println("Finished", links)
+		fmt.Println("Finished", categories)
 	})
 
-	fmt.Println(links)
+	fmt.Println(categories)
 
 	// Start scraping on https://www.thehindu.com/news
 	c.Visit("https://www.thehindu.com/news")
 }
 
-//func pathSpliter(rawURL string, links *[]model.Category) {
 func pathSpliter(rawURL string, links map[string]model.Category) {
 	//rawURL := "https://www.thehindu.cm/life-and-style/homes-and-gardens/"
 	scappingUrl := "https://www.thehindu.com/"
