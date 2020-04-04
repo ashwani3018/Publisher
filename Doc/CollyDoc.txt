@@ -1,2 +1,32 @@
+colly :  github.com/gocolly/colly/v2/...
+htmlquery : github.com/antchfx/htmlquery
+xmlquery : github.com/antchfx/xmlquery
+glob : github.com/gobwas/glob
+sanitize : github.com/kennygrant/sanitize
+chardet : github.com/saintfish/chardet
+robotstxt : github.com/temoto/robotstxt
+urlfetch : google.golang.org/appengine/urlfetch
+
+https://benbernardblog.com/web-scraping-and-crawling-are-perfectly-legal-right/
+
+https://benjamincongdon.me/blog/2018/03/01/Scraping-the-Web-in-Golang-with-Colly-and-Goquery/
+
+https://schier.co/blog/a-simple-web-scraper-in-go
+
+
+max_depth
+
+Web scraping: the act of automatically downloading a web page's data and
+              extracting very specific information from it. The extracted
+              information can be stored pretty much anywhere (database, file, etc.).
+
+Web crawling: the act of automatically downloading a web page's data,
+              extracting the hyperlinks it contains and following them.
+              The downloaded data is generally stored in an index or a database to make it easily searchable.
+
+
 Multi Attribute Reading Link
 http://go-colly.org/docs/examples/coursera_courses/
+
+IMDB GoLang Scrapping
+https://medium.com/@shahidahmed.org/programming-in-go-for-web-scraping-aedf937e769d

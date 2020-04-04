@@ -4,5 +4,6 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/P-Ads" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/P-Category" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mage" vcs="Git" />
   </component>
 </project>

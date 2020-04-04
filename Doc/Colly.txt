@@ -1,0 +1,10 @@
+IMDB GoLang Scrapping
+https://medium.com/@shahidahmed.org/programming-in-go-for-web-scraping-aedf937e769d
+https://github.com/shahidcc/Go-for-web-scraping
+
+c.OnHTML(`.lister-item-content`, func(e *colly.HTMLElement) { ….. }
+It instructs Colly that it should run the next operations when it finds a <div> element with class=”lister-item-content”. The “.” (dot) before “lister-item-content” indicates that it is for the “class” attribute, e.g <div class=”lister-item-content” …>. Instead of class, some <div> elements may use “id” like this: <div id=”content-extra-header” …>. In that case, we would have used “#” instead of “.”.
+Thus, if Colly finds the element <div class=”lister-item-content” …> anywhere in the HTML document, it starts from there and executes instructions specified in the code block. Some of these instructions and relevant operations are:
+number := e.ChildText(“.lister-item-index”)
+Extract the value of the element <span class=”lister-item-index” …>
+name := e.ChildText(“.lister-item-index ~ a”)
